@@ -1,0 +1,90 @@
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(50, 137, 177, .3), rgba(17, 53, 115, 1));
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        background-color: white;
+        border-radius: 10px;
+        min-height: 600px;
+        overflow: hidden;
+
+        .left {
+            width: 50%;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 50px;
+            gap: 30px;
+            justify-content: center;
+
+            h1 {
+
+                color: #555;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    padding: 20px 10px;
+                }
+
+                button {
+                    width: 50%;
+                    padding: 10px;
+                    border: none;
+                    background-color: rgba(43, 85, 169, 1);
+                    color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            background: linear-gradient(rgba(43, 85, 169, .6), rgba(17, 53, 115, .6)), url('https://images.pexels.com/photos/10610362/pexels-photo-10610362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center;
+            background-size: cover;
+            padding: 50px;
+            color: white;
+            gap: 30px;
+            justify-content: center;
+
+            h1 {
+                font-size: 70px;
+                line-height: 60px;
+            }
+
+            p {}
+
+            b {}
+
+            span {
+                font-size: 14px;
+            }
+
+            button {
+                width: 50%;
+                background-color: white;
+                border: none;
+                font-weight: bold;
+                height: 40px;
+                border-radius: 2px;
+                color: rgba(43, 85, 169, 1);
+                cursor: pointer;
+            }
+        }
+    }
+}

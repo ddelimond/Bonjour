@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F9F6EE;
+    background: linear-gradient(rgba(50, 137, 177, .3), rgba(17, 53, 115, 1));
 
     .card {
         display: flex;
@@ -18,7 +18,7 @@
             display: flex;
             flex: 1;
             flex-direction: column;
-            background: linear-gradient(rgba(43, 85, 169, .6), rgba(17, 53, 115, .6)), url('https://images.pexels.com/photos/8759859/pexels-photo-8759859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center;
+            background: linear-gradient(rgba(43, 85, 169, .6), rgba(17, 53, 115, .6)), url('https://images.unsplash.com/photo-1607748862156-7c548e7e98f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80') center;
             background-size: cover;
             padding: 50px;
             color: white;
@@ -43,7 +43,8 @@
                 width: 50%;
                 background-color: white;
                 border: none;
-                height: 50px;
+                font-weight: bold;
+                height: 40px;
                 border-radius: 2px;
                 color: rgba(43, 85, 169, 1);
                 cursor: pointer;
@@ -74,8 +75,6 @@
                     border-bottom: 1px solid lightgray;
                     padding: 20px 10px;
                 }
-
-
 
                 button {
                     width: 50%;
