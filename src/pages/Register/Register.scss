@@ -14,7 +14,7 @@
         min-height: 600px;
         overflow: hidden;
 
-        .left {
+        .leftRegister {
             width: 50%;
             display: flex;
             flex: 1;
@@ -51,13 +51,13 @@
             }
         }
 
-        .right {
+        .rightRegister {
             display: flex;
             flex: 1;
             flex-direction: column;
             background: linear-gradient(rgba(43, 85, 169, .6), rgba(17, 53, 115, .6)), url('https://images.pexels.com/photos/10610362/pexels-photo-10610362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center;
             background-size: cover;
-            padding: 50px;
+            padding: 30px;
             color: white;
             gap: 30px;
             justify-content: center;
