@@ -8,7 +8,7 @@ import LeftSidebar from './components/LeftSidebar/LeftSidebar'
 import RightSidebar from './components/RightSidebar/RightSidebar'
 
 function App() {
-  const currentUser = false
+  const currentUser = true
 
 
 
@@ -25,7 +25,7 @@ function App() {
     )
   }
 
-  const ProtectedRoute = (children) => {
+  const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
       return <Navigate to='/login' />
     }
@@ -43,14 +43,10 @@ function App() {
         </ProtectedRoute>,
       children: [
         {
-          path: '/',
+          path: "/",
           element: <Home />
         },
-        {
-          path: '/profile/:id',
-          element: <Profile />
-        }
-      ]
+      ],
     },
     {
       path: "/login",
