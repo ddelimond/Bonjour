@@ -6,6 +6,7 @@ import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import './Navbar.scss'
+import { user } from '../../assets/assets'
 
 const Navbar = () => {
     return (
@@ -27,7 +28,7 @@ const Navbar = () => {
                     <PersonOutlinedIcon />
                     <MailOutlinedIcon />
                     <NotificationsOutlinedIcon />
-                    <img src="https://wwhf.org/wp-content/uploads/2021/09/z_Profile-3.png" alt="User Image" />
+                    <img src={user} alt="User Image" />
                     <span>John Doe</span>
                 </div>
 

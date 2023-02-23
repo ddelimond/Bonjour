@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    padding: 15px;
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        min-height: 400px;
+
+        .userContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 10px;
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
+            span {
+                cursor: pointer;
+            }
+
+        }
+
+        .menuOption {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+
+            img {
+                cursor: pointer;
+            }
+
+            span {
+                cursor: pointer;
+            }
+        }
+
+        hr {
+            border: solid lightgray .5px;
+        }
+    }
+
+    .menu {
+        span {}
+
+        .menuOption {
+            img {}
+
+            span {}
+        }
+
+        hr {}
+    }
+
+    .menu {
+        span {}
+
+        .menuOption {
+            img {}
+
+            span {}
+        }
+
+        hr {}
+    }
+}
