@@ -13,6 +13,7 @@
     padding: 20px 15px;
     background-color: white;
     border-radius: 3px;
+    width: 100%;
 
 
     h5 {
@@ -38,6 +39,7 @@
                 width: 30px;
                 border-radius: 50%;
                 object-fit: cover;
+                cursor: pointer;
             }
 
             span {
@@ -45,6 +47,7 @@
                 align-items: center;
                 font-size: 12px;
                 font-weight: 600;
+                cursor: pointer;
             }
         }
 
