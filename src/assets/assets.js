@@ -14,10 +14,11 @@ import Courses from './13.png'
 import img from './img.png'
 import map from './map.png'
 import user from './user.png'
+import Error from './Error.png'
 
 
 
-export { Friends, Groups, Marketplace, Watch, Memories, Events, Gaming, Gallery, Videos, Messages, Fundraiser, Tutorials, Courses, user, map, img }
+export { Friends, Groups, Marketplace, Watch, Memories, Events, Gaming, Gallery, Videos, Messages, Fundraiser, Tutorials, Courses, user, map, img, Error }
 
 
 

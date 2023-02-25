@@ -1,8 +1,11 @@
-import React from 'react'
+import Suggestions from '../Suggestions/Suggestions'
+import './RightSidebar.scss'
 
 const RightSidebar = () => {
     return (
-        <div>RightSidebar</div>
+        <div className='rightBar'>
+            <Suggestions />
+        </div>
     )
 }
 

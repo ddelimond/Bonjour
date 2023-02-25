@@ -16,9 +16,11 @@ const Navbar = () => {
                     <span className='logo'>
                         Bonjour
                     </span>
-                    <HomeOutlinedIcon />
-                    <DarkModeOutlinedIcon />
-                    <GridViewOutlinedIcon />
+                    <div className='leftNavIcons'>
+                        <HomeOutlinedIcon />
+                        <DarkModeOutlinedIcon />
+                        <GridViewOutlinedIcon />
+                    </div>
                     <div className='searchContainer'>
                         <SearchOutlinedIcon />
                         <input type="text" placeholder='Search' />
@@ -28,7 +30,7 @@ const Navbar = () => {
                     <PersonOutlinedIcon />
                     <MailOutlinedIcon />
                     <NotificationsOutlinedIcon />
-                    <img src={user} alt="User Image" />
+                    <img src='https://images.unsplash.com/photo-1674231749604-d915baa7df9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI0Mnx0b3dKWkZza3BHZ3x8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' alt="User Image" />
                     <span>John Doe</span>
                 </div>
 

@@ -6,6 +6,7 @@ import Profile from './pages/Profile/Profile';
 import Navbar from './components/Navbar/Navbar'
 import LeftSidebar from './components/LeftSidebar/LeftSidebar'
 import RightSidebar from './components/RightSidebar/RightSidebar'
+import ErrorPage from './pages/Error/ErrorPage';
 
 function App() {
   const currentUser = true
@@ -14,14 +15,19 @@ function App() {
 
   const Layout = () => {
     return (
-      <>
+      <div style={{
+        backgroundColor: 'rgba(246,243,243,1)'
+      }
+      }>
         <Navbar />
         <div style={{ display: 'flex' }}>
           <LeftSidebar />
           <Outlet />
           <RightSidebar />
         </div>
-      </>
+      </div >
+
+
     )
   }
 
@@ -47,6 +53,7 @@ function App() {
           element: <Home />
         },
       ],
+      errorElement: <ErrorPage />
     },
     {
       path: "/login",
