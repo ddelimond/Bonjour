@@ -1,3 +1,5 @@
+@import '../../style.scss';
+
 :root {
     --shareBlue: rgba(89, 116, 243, 1);
     --dismissRed: rgba(220, 90, 87, 1);
@@ -7,73 +9,81 @@
 
 
 .suggestionContainer {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    padding: 20px 15px;
-    background-color: white;
-    border-radius: 3px;
-    width: 100%;
-
-
-    h5 {
-        text-align: left;
-        font-size: 12px;
-        color: var(--subFontGray);
-        font-weight: 500;
-    }
-
-    .suggestedFriendContainer {
+    @include themify($themes) {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 20px 15px;
+        color: themed('textColor');
+        background-color: themed('bg');
+        border-radius: 3px;
+        width: 100%;
+        -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
+        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
 
-        .friendInfo {
-            display: flex;
-            justify-content: center;
-            column-gap: 13px;
-            margin-bottom: 10px;
 
-            img {
-                height: 30px;
-                width: 30px;
-                border-radius: 50%;
-                object-fit: cover;
-                cursor: pointer;
-            }
-
-            span {
-                display: flex;
-                align-items: center;
-                font-size: 12px;
-                font-weight: 600;
-                cursor: pointer;
-            }
+        h5 {
+            text-align: left;
+            font-size: 12px;
+            color: var(--subFontGray);
+            font-weight: 500;
         }
 
-        .btnContainer {
+        .suggestedFriendContainer {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
-            column-gap: 10px;
-            align-items: center;
-        }
+            justify-content: space-between;
 
-        button {
-            border: none;
-            padding: 5px;
-            color: white;
-            cursor: pointer;
-            height: 30px;
-        }
 
-        .follow {
-            background: var(--shareBlue);
-        }
 
-        .dismiss {
-            background: var(--dismissRed);
-        }
+            .friendInfo {
+                display: flex;
+                justify-content: center;
+                column-gap: 13px;
+                margin-bottom: 10px;
 
+                img {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    cursor: pointer;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+
+            .btnContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                column-gap: 10px;
+                align-items: center;
+            }
+
+            button {
+                border: none;
+                padding: 5px;
+                color: white;
+                cursor: pointer;
+                height: 30px;
+            }
+
+            .follow {
+                background: var(--shareBlue);
+            }
+
+            .dismiss {
+                background: var(--dismissRed);
+            }
+
+        }
     }
 }

@@ -21,7 +21,7 @@ const Activities = () => {
 
                     <img src="https://images.unsplash.com/photo-1672229092597-634c07cdc1d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=707&q=80" />
 
-                    <p><span>Christian Boyd  </span> liked a post .</p>
+                    <p><span>Christian Boyd</span>  liked a post .</p>
                 </div>
                 <div className='activityTimeContainer'>
                     <span className='lastestActivity'>20 secs ago</span>
