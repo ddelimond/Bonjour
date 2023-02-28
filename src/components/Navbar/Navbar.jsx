@@ -8,10 +8,25 @@ import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import './Navbar.scss';
 import { user } from '../../assets/assets';
+import { useDispatch } from 'react-redux';
+import { changeTheme } from '../../redux/themeSlice';
 
 const Navbar = () => {
+    const mode = JSON.parse(localStorage.getItem('theme-dark'));
 
+    const dispatch = useDispatch();
     // const { toggle, darkMode } = useContext(DarkModeContext)
+    const changeThemeMode = () => {
+        dispatch(changeTheme());
+        if (!localStorage.getItem('theme-dark')) {
+            localStorage.setItem('theme-dark', true)
+        } else if (mode) {
+            localStorage.setItem('theme-dark', false)
+        } else {
+            localStorage.setItem('theme-dark', true)
+        }
+    }
+
 
     return (
         <>
@@ -22,7 +37,7 @@ const Navbar = () => {
                     </span>
                     <div className='leftNavIcons'>
                         <HomeOutlinedIcon />
-                        <DarkModeOutlinedIcon />
+                        {mode ? <WbSunnyOutlinedIcon onClick={changeTheme} /> : <DarkModeOutlinedIcon onClick={changeThemeMode} />}
                         <GridViewOutlinedIcon />
                     </div>
                     <div className='searchContainer'>

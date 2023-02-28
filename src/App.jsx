@@ -7,15 +7,20 @@ import Navbar from './components/Navbar/Navbar'
 import LeftSidebar from './components/LeftSidebar/LeftSidebar'
 import RightSidebar from './components/RightSidebar/RightSidebar'
 import ErrorPage from './pages/Error/ErrorPage';
+import { useSelector } from 'react-redux';
+
 
 function App() {
   const currentUser = true
 
+  const theme = useSelector(state => state.theme).theme;
+
+  console.log(theme)
 
 
   const Layout = () => {
     return (
-      <div className='theme-dark' style={{
+      <div className={theme} style={{
         background: 'linear-gradient(to left, rgba(50, 137, 177, .3), rgba(17, 53, 115, 1))'
       }
       }>
