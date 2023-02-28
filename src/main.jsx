@@ -1,17 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import { AuthContextProvider } from './context/authContext'
-import { DarkModeContextProvider } from './context/darkModeContex'
-
+import { Provider } from 'react-redux';
+import { store } from './redux/store'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <DarkModeContextProvider>
-      <AuthContextProvider
+    <Provider store={store}>
       <App />
-    </AuthContextProvider>
-  </DarkModeContextProvider>
-
+    </Provider>
   </React.StrictMode >
 );

@@ -7,18 +7,15 @@ import Navbar from './components/Navbar/Navbar'
 import LeftSidebar from './components/LeftSidebar/LeftSidebar'
 import RightSidebar from './components/RightSidebar/RightSidebar'
 import ErrorPage from './pages/Error/ErrorPage';
-import './style.scss';
-import { useContext } from 'react';
-import { DarkModeContext } from './context/darkModeContex';
 
 function App() {
   const currentUser = true
 
-  const { darkMode } = useContext(DarkModeContext);
+
 
   const Layout = () => {
     return (
-      <div className={`theme-${darkMode ? 'dark' : 'light'}`} style={{
+      <div className='theme-dark' style={{
         background: 'linear-gradient(to left, rgba(50, 137, 177, .3), rgba(17, 53, 115, 1))'
       }
       }>
