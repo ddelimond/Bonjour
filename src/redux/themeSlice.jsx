@@ -7,7 +7,7 @@ export const themeSlice = createSlice({
     initialState,
     reducers: {
         changeTheme: (state) => {
-            state.theme === 'theme-light' ? state.theme = 'theme-dark' : state.theme = 'theme-light'
+            JSON.parse(localStorage.getItem('theme-dark')) ? state.theme = 'theme-dark' : state.theme = 'theme-light'
         }
     }
 })

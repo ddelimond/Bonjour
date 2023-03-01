@@ -12,7 +12,9 @@ import { useSelector } from 'react-redux';
 
 function App() {
   const currentUser = true
-
+  const storedTheme = JSON.parse(localStorage.getItem('theme-dark'));
+  console.log(storedTheme)
+  storedTheme === null ? localStorage.setItem('theme-dark', 'false') : storedTheme;
   const theme = useSelector(state => state.theme).theme;
 
   console.log(theme)

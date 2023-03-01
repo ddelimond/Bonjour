@@ -15,15 +15,13 @@ const Navbar = () => {
     const mode = JSON.parse(localStorage.getItem('theme-dark'));
 
     const dispatch = useDispatch();
-    // const { toggle, darkMode } = useContext(DarkModeContext)
+
     const changeThemeMode = () => {
         dispatch(changeTheme());
-        if (!localStorage.getItem('theme-dark')) {
+        if (!mode) {
             localStorage.setItem('theme-dark', true)
-        } else if (mode) {
-            localStorage.setItem('theme-dark', false)
         } else {
-            localStorage.setItem('theme-dark', true)
+            localStorage.setItem('theme-dark', false)
         }
     }
 
@@ -37,7 +35,7 @@ const Navbar = () => {
                     </span>
                     <div className='leftNavIcons'>
                         <HomeOutlinedIcon />
-                        {mode ? <WbSunnyOutlinedIcon onClick={changeTheme} /> : <DarkModeOutlinedIcon onClick={changeThemeMode} />}
+                        {mode ? <WbSunnyOutlinedIcon onClick={changeThemeMode} /> : <DarkModeOutlinedIcon onClick={changeThemeMode} />}
                         <GridViewOutlinedIcon />
                     </div>
                     <div className='searchContainer'>
