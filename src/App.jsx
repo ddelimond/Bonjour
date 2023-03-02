@@ -8,15 +8,15 @@ import LeftSidebar from './components/LeftSidebar/LeftSidebar'
 import RightSidebar from './components/RightSidebar/RightSidebar'
 import ErrorPage from './pages/Error/ErrorPage';
 import { useSelector } from 'react-redux';
+import { store } from './redux/store';
 
 
 function App() {
   const currentUser = true
-  const storedTheme = JSON.parse(localStorage.getItem('theme-dark'));
-  console.log(storedTheme)
+  let storedTheme = JSON.parse(localStorage.getItem('theme-dark'));
+  console.log('App ' + storedTheme)
   storedTheme === null ? localStorage.setItem('theme-dark', 'false') : storedTheme;
-  const theme = useSelector(state => state.theme).theme;
-
+  let theme = useSelector(state => state.theme).theme;
   console.log(theme)
 
 

@@ -13,16 +13,10 @@ import { changeTheme } from '../../redux/themeSlice';
 
 const Navbar = () => {
     const mode = JSON.parse(localStorage.getItem('theme-dark'));
-
     const dispatch = useDispatch();
 
     const changeThemeMode = () => {
         dispatch(changeTheme());
-        if (!mode) {
-            localStorage.setItem('theme-dark', true)
-        } else {
-            localStorage.setItem('theme-dark', false)
-        }
     }
 
 
