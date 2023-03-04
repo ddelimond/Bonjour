@@ -1,7 +1,17 @@
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { loginAuth } from '../../redux/userSlice'
 import './Login.scss'
 
 const Login = () => {
+
+    const dispatch = useDispatch()
+
+    const handleLogin = () => {
+        dispatch(loginAuth())
+    }
+
+
     return (
         <div className='login'>
             <div className='card'>
@@ -18,7 +28,7 @@ const Login = () => {
                     <form action="/login" method='GET'>
                         <input type="email" name="username" placeholder='Username' />
                         <input type="password" name='password' placeholder='Password' />
-                        <button>Login</button>
+                        <button onClick={handleLogin()}>Login</button>
                     </form>
                 </div>
             </div>

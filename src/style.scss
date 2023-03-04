@@ -2,7 +2,7 @@ $themes: (
     light: (textColor: rgba(17, 53, 115, 1),
         bg: white,
         logo: rgba(17, 53, 115, 1),
-        bgSoft: linear-gradient(to left, rgba(50, 137, 177, .3), rgba(17, 53, 115, 1)),
+        bgSoft: rgba(17, 53, 115, .5),
         textColorSoft: #555,
         border: lightgray,
     ),
@@ -51,3 +51,6 @@ $themes: (
         @content;
     }
 }
+
+
+// linear-gradient(to left, rgba(50, 137, 177, .3),

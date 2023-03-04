@@ -1,10 +1,11 @@
+import Stories from '../../components/Stories/Stories'
 import './Home.scss'
 
 
 const Home = () => {
     return (
         <div style={{ flex: 6 }} className='home'>
-            <div>Home</div>
+            <Stories />
             <div>Home</div>
             <div>Home</div>
             <div>Home</div>

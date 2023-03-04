@@ -1,4 +1,19 @@
-.home{
-    
-    text-align: center;
+@import '../../style.scss';
+
+
+.home {
+    @include themify($themes) {
+        position: sticky;
+        height: calc(100vh - 70px);
+        overflow: scroll;
+        top: 70px;
+        text-align: center;
+        background-color: themed('bgSoft');
+        color: white;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+    }
 }

@@ -8,8 +8,9 @@ import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 import './Navbar.scss';
 import { user } from '../../assets/assets';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeTheme } from '../../redux/themeSlice';
+
 
 const Navbar = () => {
     const mode = JSON.parse(localStorage.getItem('theme-dark'));
@@ -18,6 +19,8 @@ const Navbar = () => {
     const changeThemeMode = () => {
         dispatch(changeTheme());
     }
+
+    const currerntUser = useSelector(user)
 
 
     return (

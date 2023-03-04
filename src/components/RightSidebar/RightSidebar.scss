@@ -1,4 +1,7 @@
+@import '../../style.scss';
+
 .rightBar {
+    @include themify($themes) {
 
     display: flex;
     flex: 3;
@@ -6,9 +9,10 @@
     align-items: center;
     row-gap: 20px;
     position: sticky;
-    top: 90px;
-    height: calc(100vh - 90px);
+    top: 70px;
+    height: calc(100vh - 70px);
     overflow: scroll;
+    background-color: themed('bg');
 
 
     &::-webkit-scrollbar {
@@ -16,4 +20,5 @@
     }
 
     padding: 15px;
+}
 }

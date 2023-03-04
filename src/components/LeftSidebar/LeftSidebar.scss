@@ -18,6 +18,7 @@
         overflow: scroll;
         background-color: themed('bg');
         color: themed('textColor');
+       
 
         &::-webkit-scrollbar {
             display: none;

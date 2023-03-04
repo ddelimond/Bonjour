@@ -8,11 +8,13 @@ import LeftSidebar from './components/LeftSidebar/LeftSidebar'
 import RightSidebar from './components/RightSidebar/RightSidebar'
 import ErrorPage from './pages/Error/ErrorPage';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 import { store } from './redux/store';
 
 
 function App() {
-  const currentUser = true
+  const currentUser = false
+  // const [currentUser, setCurrentUser] = useState(localStorage.getItem('user'))
   let storedTheme = JSON.parse(localStorage.getItem('theme-dark'));
   console.log('App ' + storedTheme)
   storedTheme === null ? localStorage.setItem('theme-dark', 'false') : storedTheme;
@@ -22,10 +24,7 @@ function App() {
 
   const Layout = () => {
     return (
-      <div className={theme} style={{
-        background: 'linear-gradient(to left, rgba(50, 137, 177, .3), rgba(17, 53, 115, 1))'
-      }
-      }>
+      <div className={theme}>
         <Navbar />
         <div style={{ display: 'flex' }}>
           <LeftSidebar />
