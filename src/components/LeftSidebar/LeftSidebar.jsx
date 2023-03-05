@@ -1,8 +1,13 @@
 
+import { current } from '@reduxjs/toolkit'
+import { useSelector } from 'react-redux'
 import { Friends, Groups, Marketplace, Watch, Memories, Events, Gaming, Gallery, Videos, Messages, Fundraiser, Tutorials, Courses, user } from '../../assets/assets'
 import './LeftSidebar.scss'
 
 const LeftSidebar = () => {
+
+    const currentUser = useSelector(state => state.user.user)
+    console.log(currentUser)
 
     return (
         <div className='leftBar'>
@@ -10,8 +15,8 @@ const LeftSidebar = () => {
 
                 <div className='menu'>
                     <div className='userContainer'>
-                        <img src='https://images.unsplash.com/photo-1674231749604-d915baa7df9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI0Mnx0b3dKWkZza3BHZ3x8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' alt='user image' />
-                        <span>John Doe</span>
+                        <img src={currentUser.img} />
+                        <span>{currentUser.name}</span>
                     </div>
                     <div className='menuOption'>
                         <img src={Friends} alt="Friends" />

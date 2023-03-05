@@ -10,17 +10,21 @@ import './Navbar.scss';
 import { user } from '../../assets/assets';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeTheme } from '../../redux/themeSlice';
+import { current } from '@reduxjs/toolkit';
 
 
 const Navbar = () => {
     const mode = JSON.parse(localStorage.getItem('theme-dark'));
     const dispatch = useDispatch();
-
+    let currentUser = useSelector(state => state.user.user)
     const changeThemeMode = () => {
         dispatch(changeTheme());
     }
 
-    const currerntUser = useSelector(user)
+
+
+
+
 
 
     return (
@@ -44,8 +48,8 @@ const Navbar = () => {
                     <PersonOutlinedIcon />
                     <MailOutlinedIcon />
                     <NotificationsOutlinedIcon />
-                    <img src='https://images.unsplash.com/photo-1674231749604-d915baa7df9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI0Mnx0b3dKWkZza3BHZ3x8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' alt="User Image" />
-                    <span>John Doe</span>
+                    <img src={currentUser.img} />
+                    <span>{currentUser.name}</span>
                 </div>
 
             </section>

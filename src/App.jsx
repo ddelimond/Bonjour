@@ -13,13 +13,13 @@ import { store } from './redux/store';
 
 
 function App() {
-  const currentUser = false
-  // const [currentUser, setCurrentUser] = useState(localStorage.getItem('user'))
+
+  const currentUser = JSON.parse(localStorage.getItem('user')) ? true : false
+
   let storedTheme = JSON.parse(localStorage.getItem('theme-dark'));
-  console.log('App ' + storedTheme)
   storedTheme === null ? localStorage.setItem('theme-dark', 'false') : storedTheme;
   let theme = useSelector(state => state.theme).theme;
-  console.log(theme)
+
 
 
   const Layout = () => {

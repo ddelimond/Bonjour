@@ -28,7 +28,7 @@ const Login = () => {
                     <form action="/login" method='GET'>
                         <input type="email" name="username" placeholder='Username' />
                         <input type="password" name='password' placeholder='Password' />
-                        <button onClick={handleLogin()}>Login</button>
+                        <button onClick={handleLogin}>Login</button>
                     </form>
                 </div>
             </div>
