@@ -1,0 +1,116 @@
+@import '../../style.scss';
+
+:root {
+    --shareBlue: rgba(89, 116, 243, 1);
+    --dismissRed: rgba(220, 90, 87, 1);
+    --subFontGray: rgba(170, 170, 170, 1);
+}
+
+
+
+.profileInfoContainer {
+    @include themify($themes) {
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        background-color: themed('bg');
+        color: themed('textColor');
+        margin: 0px auto 30px;
+        width: 90%;
+        height: 250px;
+        position: relative;
+        -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
+        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.4);
+
+        .profilePicContainer {
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: auto;
+            position: absolute;
+            top: -60px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        h1 {}
+
+        .InfoContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            height: 60px;
+
+
+            .socialContainer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                column-gap: 10px;
+                height: 60px;
+                width: 140px;
+
+                svg {}
+            }
+
+            .middle {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                height: 60px;
+                width: 280px;
+                padding-right: 90px;
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+
+                    height: 60px;
+
+                    svg {}
+
+                    span {}
+                }
+            }
+
+            .right {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                height: 60px;
+
+                svg {}
+            }
+        }
+
+        button {
+            width: 80px;
+            height: 35px;
+            border-radius: 3px;
+            border: none;
+            background-color: var(--shareBlue);
+            color: white;
+            cursor: pointer;
+            transition: all ease-in .3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+    }
+}

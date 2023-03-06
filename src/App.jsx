@@ -56,6 +56,10 @@ function App() {
           path: "/",
           element: <Home />
         },
+        {
+          path: "/profile/:id",
+          element: <Profile />
+        },
       ],
       errorElement: <ErrorPage />
     },

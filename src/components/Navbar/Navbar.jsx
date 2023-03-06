@@ -11,9 +11,11 @@ import { user } from '../../assets/assets';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeTheme } from '../../redux/themeSlice';
 import { current } from '@reduxjs/toolkit';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
+
     const mode = JSON.parse(localStorage.getItem('theme-dark'));
     const dispatch = useDispatch();
     let currentUser = useSelector(state => state.user.user)
@@ -22,18 +24,15 @@ const Navbar = () => {
     }
 
 
-
-
-
-
-
     return (
         <>
             <section className='navContainer'>
                 <div className='navLeft'>
-                    <span className='logo'>
-                        Bonjour
-                    </span>
+                    <Link to='/' style={{ textDecoration: 'none' }}>
+                        <span className='logo'>
+                            Bonjour
+                        </span>
+                    </Link>
                     <div className='leftNavIcons'>
                         <HomeOutlinedIcon />
                         {mode ? <WbSunnyOutlinedIcon onClick={changeThemeMode} /> : <DarkModeOutlinedIcon onClick={changeThemeMode} />}
